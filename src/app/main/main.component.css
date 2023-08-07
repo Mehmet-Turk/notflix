@@ -1,0 +1,40 @@
+
+body {
+  background-image: url('src/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:590px;
+}
+html{
+  background-color:black;
+  height:590px;
+
+}
+h1{
+font-size:100px;
+}
+.form-horizontal{
+    display:block;
+    width:50%;
+    margin:0 auto;
+    margin-bottom:50px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+td p {
+      margin: 0; /* Remove default margin */
+      padding: 5px; /* Optional: Add padding to create space around the titles */
+      color: white; /* Set the title color to white */
+}
