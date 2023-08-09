@@ -1,16 +1,4 @@
 
-body {
-  background-image: url('src/assets/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height:590px;
-}
-html{
-  background-color:black;
-  height:590px;
-
-}
 h1{
 font-size:100px;
 }
