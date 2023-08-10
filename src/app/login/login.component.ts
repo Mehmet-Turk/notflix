@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -7,19 +8,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-// username : string ="";
-// password : string ="";
-// show: boolean= false;
-// submit(){
-// console.log("user name is " + this.username)
-// if(this.username.equals("admin") && this.password.equals("admin"))
-// this.router.navigate(['/admin'];
-// this.clear();
-// }
-// clear(){
-// this.username ="";
-// this.password = "";
-// this.show = true;
-// }
+constructor(private router: Router, private route: ActivatedRoute) {}
+username : string ="";
+password : string ="";
+show: boolean= false;
+login(){
+console.log("user name is " + this.username)
+if(this.username == "admin" && this.password == "admin")
+this.router.navigate(['/admin']);
+this.clear();
+}
+clear(){
+this.username ="";
+this.password = "";
+this.show = true;
+}
 
 }
