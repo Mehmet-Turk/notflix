@@ -6,25 +6,25 @@
 
 
 <div class="d-flex justify-content-center">
-  <form class="container mt-1 " onsubmit="login()">
+  <form class="container mt-1 " (ngSubmit)="login()">
 
   <div class="mb-3 w-50 ">
     <label for="email" class="form-label text-light">Email address</label>
-    <input type="email" class="form-control" name="username" id="email" aria-describedby="emailHelp">
-<!--    <div class="alert alert-danger" role="alert">-->
+    <input type="email" class="form-control" name="username" id="email" aria-describedby="emailHelp" [(ngModel)] ="username">
+<!--    <div *ngif = "{{username}} != "admin" " class="alert alert-danger" role="alert">-->
 <!--      A simple danger alert—check it out!-->
-<!--    </div>  -->
+<!--    </div>-->
   </div>
   <div class="mb-3 w-50 ">
     <label for="password" class="form-label text-light">Password</label>
-    <input type="password" class="form-control" name="password" id="password" >
+    <input type="password" class="form-control" name="password" id="password" [(ngModel)]= "password">
   </div>
 <!--  <div class="mb-3 form-check">-->
 <!--    <input type="checkbox" class="form-check-input text-light" id="exampleCheck1">-->
 <!--    <label class="form-check-label text-light" for="exampleCheck1">Check me out</label>-->
 <!--  </div>-->
   <button type="submit" class="btn btn-primary">Submit</button>
-<!--    <span *ngIf="show"> <button>Login success !!</button></span>-->
+    <span *ngIf="show"> <a></a> Login success !!<</span>
 </form>
 </div>
 
