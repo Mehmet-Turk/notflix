@@ -13,6 +13,7 @@ import { SciFiComponent } from './sci-fi/sci-fi.component';
 import { HorrorComponent } from './horror/horror.component';
 import { ActionComponent } from './action/action.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddFilmComponent } from './add-film/add-film.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AdminComponent } from './admin/admin.component';
     SciFiComponent,
     HorrorComponent,
     ActionComponent,
-    AdminComponent
+    AdminComponent,
+    AddFilmComponent
   ],
   imports: [
     BrowserModule,
