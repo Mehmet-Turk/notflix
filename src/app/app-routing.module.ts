@@ -7,6 +7,8 @@ import { SciFiComponent } from 'src/app/sci-fi/sci-fi.component';
 import { HorrorComponent } from 'src/app/horror/horror.component';
 import { ActionComponent } from 'src/app/action/action.component';
 import { AdminComponent } from 'src/app/admin/admin.component';
+import { AddFilmComponent } from 'src/app/add-film/add-film.component';
+
 const routes: Routes = [
 {path: "", component: MainComponent},
 {path:"login", component:LoginComponent},
@@ -14,7 +16,9 @@ const routes: Routes = [
 {path:"sci-fi", component:SciFiComponent},
 {path:"horror", component:HorrorComponent},
 {path:"action", component:ActionComponent},
-{path:"admin", component:AdminComponent}
+{path:"admin", component:AdminComponent},
+{path:"addfilm", component:AddFilmComponent}
+
 
 ]
 

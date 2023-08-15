@@ -18,29 +18,11 @@
 </form>
 <table>
   <tr>
-    <td>
-      <a routerLink="/action">
-      <img src="assets/action1.jpg" alt="Action" width="150">
+    <td *ngFor = "let genre of genres">
+      <a routerLink="{{genre}}">
+      <img src="assets/{{genre}}.jpg" alt="{{genre}}" width="150">
       </a>
-      <p>Action</p>
-    </td>
-    <td>
-      <a routerLink="/sci-fi">
-      <img src="assets/sci-fi.jpg" alt="Sci-fi" width="150">
-      </a>
-      <p>Sci-fi</p>
-    </td>
-    <td>
-      <a routerLink="/drama">
-      <img src="assets/drama.jpg"  alt="drama" width="150" >
-      </a>
-      <p>Drama</p>
-    </td>
-    <td>
-      <a routerLink="/horror">
-      <img src="assets/horror.jpg" alt="Horror" width="150">
-      </a>
-      <p>Horror</p>
+      <p>{{capitalizeFirstLetter(genre)}}</p>
     </td>
   </tr>
 </table>
