@@ -8,12 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { DramaComponent } from './drama/drama.component';
-import { SciFiComponent } from './sci-fi/sci-fi.component';
-import { HorrorComponent } from './horror/horror.component';
-import { ActionComponent } from './action/action.component';
+import { CategoryComponent } from './category/category.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddFilmComponent } from './add-film/add-film.component';
+import { SafePipe } from './category/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -22,12 +20,10 @@ import { AddFilmComponent } from './add-film/add-film.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    DramaComponent,
-    SciFiComponent,
-    HorrorComponent,
-    ActionComponent,
+    CategoryComponent,
     AdminComponent,
-    AddFilmComponent
+    AddFilmComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

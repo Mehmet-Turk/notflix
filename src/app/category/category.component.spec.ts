@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SciFiComponent } from './sci-fi.component';
+import { CategoryComponent } from './action.component';
 
-describe('SciFiComponent', () => {
-  let component: SciFiComponent;
-  let fixture: ComponentFixture<SciFiComponent>;
+describe('CategoryComponent', () => {
+  let component: CategoryComponent;
+  let fixture: ComponentFixture<ActionComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SciFiComponent]
+      declarations: [CategoryComponent]
     });
-    fixture = TestBed.createComponent(SciFiComponent);
+    fixture = TestBed.createComponent(CategoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

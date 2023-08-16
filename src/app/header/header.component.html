@@ -39,12 +39,38 @@
         <!--        </li>-->
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
+        <input class="form-control me-2 py-2" type="search" placeholder="Search" aria-label="Search"
+               name="myInput" id="searchInput" [(ngModel)]="searchValue">
+        <button class="btn btn-outline-light" (click)="search()">Search</button>
       </form>
     </div>
   </div>
 </nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg" *ngFor = "let film of searchResults" >
+      <div class="m-4">
+        <div class="card" style="width: 300px;">
+          <iframe width="300" height="300"
+                  id="video"
+                  class="video"
+                  [src]="film.url | safe"
+                  frameborder="0"
+                  allowfullscreen>
+          </iframe>
+          <!--          <iframe width="300" height="300" [src]="film.url | safe">-->
+          <!--          </iframe>-->
+          <div class="card-body text-center bg-secondary text-light">
+            <h5 class="card-title">{{film.title}}</h5>
+            <p class="card-text">{{film.summary}}</p>
+            <!--            <a href="#" class="btn btn-primary">View Profile</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
