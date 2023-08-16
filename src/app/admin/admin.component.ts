@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FILMS} from './films.constant'
+import { FILMS} from './films.constant';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
