@@ -1,6 +1,6 @@
 import {Film} from 'src/app/core/interfaces';
 
-export const FILMS: Film[] = [
+export  let FILMS: Film[] = [
                  {
                      title: "THE POLICEMAN",
                      genre: "action",

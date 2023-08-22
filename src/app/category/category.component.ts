@@ -21,6 +21,9 @@ this.genre = this.router.url.replace("/", "");
 console.log(this.genre);
 this.categorizeFilms();
 }
+capitalizeFirstLetter(str:string):string{
+    return str.charAt(0).toUpperCase() + str.substring(1);
+    }
 categorizeFilms(): void {
   this.categorizedFilms = this.films.filter((el) =>{
     return el.genre === this.genre });

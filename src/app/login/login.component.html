@@ -9,17 +9,17 @@
   <form [formGroup]="loginForm" class="mt-1 w-50" (ngSubmit)="onSubmit()">
 
   <div class="mb-3 w-50 ">
-    <label for="email" class="form-label text-light">Email address</label>
+    <label for="email" class="form-label text-light">Username</label>
     <input type="email" class="form-control" name="username" id="email" aria-describedby="emailHelp" formControlName="username">
-    <div *ngIf = "errorMessageUserName" class="alert alert-danger">
+    <div *ngIf = "errorMessageUserName" class="alert alert-danger mt-1">
       {{errorMessageUserName}}
     </div>
   </div>
-  <div class="mb-3 w-50 ">
+  <div class="mb-1 w-50 ">
     <label for="password" class="form-label text-light">Password</label>
     <input type="password" class="form-control" name="password" id="password" formControlName="password">
   </div>
-    <div *ngIf = "errorMessagePassword" class="alert alert-danger">
+    <div *ngIf = "errorMessagePassword" class="alert alert-danger w-50">
       {{errorMessagePassword}}
     </div>
   <button type="submit" class="btn btn-primary">Submit</button>
