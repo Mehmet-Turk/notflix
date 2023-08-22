@@ -17,7 +17,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item pe-5">
-          <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          <a routerLink="/login" class="nav-link active text-light" type="submit">Login</a>
+        </li>
+
+        <li class="nav-item pe-5">
+          <a routerLink="/" class="nav-link active text-light" aria-current="page" >Home</a>
         </li>
 
         <!--        <li class="nav-item">-->
@@ -49,7 +53,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg" *ngFor = "let film of searchResults" >
+    <div class="col-lg d-flex justify-content-center" *ngFor = "let film of searchResults" >
       <div class="m-4">
         <div class="card" style="width: 300px;">
           <iframe width="300" height="300"
@@ -63,6 +67,7 @@
           <!--          </iframe>-->
           <div class="card-body text-center bg-secondary text-light">
             <h5 class="card-title">{{film.title}}</h5>
+            <p class="card-text">Genre: {{capitalizeFirstLetter(film.genre)}}</p>
             <p class="card-text">{{film.summary}}</p>
             <!--            <a href="#" class="btn btn-primary">View Profile</a>-->
           </div>

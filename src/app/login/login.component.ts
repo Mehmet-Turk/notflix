@@ -30,13 +30,16 @@ errorMessagePassword: string = "";
   }else if(this.loginForm.get('username')?.hasError('minlength')){
         this.errorMessageUserName = "Min Length is 4 chars";
   }else if(this.loginForm.get('username')?.hasError('pattern')){
-          this.errorMessageUserName = "Invalid username format";}
+          this.errorMessageUserName = "Invalid username format";
+  }else if(this.loginForm.value.username != "admin" ){
+             this.errorMessageUserName = "Wrong username!";}
 
    if(this.loginForm.get('password')?.hasError('required')){
          this.errorMessagePassword = "This field is required";
      }else if(this.loginForm.get('password')?.hasError('minlength')){
            this.errorMessagePassword = "Min Length is 10 chars";
-     }
+     }else if(this.loginForm.value.password != "adminadmin" ){
+                   this.errorMessagePassword = "Wrong password!";}
 //      console.log(this.loginForm);
 //      console.log(this.loginForm.value.username);
 

@@ -1,26 +1,32 @@
 <app-header></app-header>
 <h2 class="text-light px-5 mx-5 mt-5">Add Film</h2>
 
-<form class="px-5 mx-5 py-5 ">
-  <div class="form-group text-light ">
+<form #filmForm="ngForm" class="px-5 mx-5 py-5" (ngSubmit)="onSubmit()">
+  <div class="form-group text-light">
     <label for="exampleFormControlInput1">Title</label>
-    <input type="email" class="form-control bg-secondary" id="exampleFormControlInput1">
+    <input type="text" class="form-control bg-secondary" id="exampleFormControlInput1" [(ngModel)]="title" name="title">
   </div>
+
   <div class="form-group text-light">
     <label for="exampleFormControlSelect1">Genre</label>
-    <select class="form-control bg-secondary" id="exampleFormControlSelect1">
+    <select class="form-control bg-secondary" id="exampleFormControlSelect1" [(ngModel)]="genre" name="genre">
       <option>Action</option>
       <option>Drama</option>
       <option>Horror</option>
       <option>Sci-Fi</option>
     </select>
   </div>
+
   <div class="form-group text-light">
-    <label for="exampleFormControlInput1">Url</label>
-    <input type="email" class="form-control bg-secondary" id="exampleFormControlInput2">
+    <label for="exampleFormControlInput2">Url</label>
+    <input type="text" class="form-control bg-secondary" id="exampleFormControlInput2" [(ngModel)]="url" name="url">
   </div>
+
   <div class="form-group text-light">
     <label for="exampleFormControlTextarea1">Summary</label>
-    <textarea class="form-control bg-secondary" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control bg-secondary" id="exampleFormControlTextarea1" rows="2" [(ngModel)]="summary" name="summary"></textarea>
   </div>
+
+  <button class="btn btn-outline-light mt-3" type="submit">Add Film</button>
 </form>
+

@@ -23,7 +23,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg" *ngFor = "let film of searchResults" >
-      <div class="m-4">
+      <div class="m-4 d-flex justify-content-center">
         <div class="card" style="width: 300px;">
           <iframe width="300" height="300"
                   id="video"
@@ -36,6 +36,7 @@
           <!--          </iframe>-->
           <div class="card-body text-center bg-secondary text-light">
             <h5 class="card-title">{{film.title}}</h5>
+            <p class="card-text">Genre: {{capitalizeFirstLetter(film.genre)}}</p>
             <p class="card-text">{{film.summary}}</p>
             <!--            <a href="#" class="btn btn-primary">View Profile</a>-->
           </div>
