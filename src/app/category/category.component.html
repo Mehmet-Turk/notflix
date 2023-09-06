@@ -19,8 +19,8 @@
 <div class="container-fluid">
   <div *ngIf="categorizedFilms" class="row">
     <div class="col-lg" *ngFor = "let film of categorizedFilms" >
-      <div class="m-4 d-flex justify-content-center">
-        <div class="card" style="width: 300px;">
+      <div class="m-4 d-flex justify-content-center" >
+        <div class="card" style="width: 300px;" >
           <iframe width="300" height="300"
                   id="video"
                   class="video"
@@ -34,6 +34,11 @@
             <h5 class="card-title">{{film.title}}</h5>
             <p class="card-text">Genre: {{capitalizeFirstLetter(film.genre)}}</p>
             <p class="card-text">{{film.summary}}</p>
+            <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+            </div>
+
+
+            <div class="buttons px-4 mt-0"></div>
 
             <!--            <a href="#" class="btn btn-primary">View Profile</a>-->
           </div>
